@@ -13,11 +13,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
-import { AsideComponent } from './aside/aside.component';
-import { MapComponent } from './map/map.component';
 import { LandpadsComponent } from './landpads/landpads.component';
 import { LaunchpadsComponent } from './launchpads/launchpads.component';
-import { MapPopupComponent } from './map/map-popup/map-popup.component';
 import { RocketsComponent } from './rockets/rockets.component';
 import { RocketItemComponent } from './rockets/rocket-item/rocket-item.component';
 import { LandpadItemComponent } from './home-page/landpad-item/landpad-item.component';
@@ -31,12 +28,9 @@ import { FooterComponent } from './footer/footer.component';
     AppComponent,    
     HeaderComponent,  
     HomePageComponent,
-    FourOhFourComponent,   
-    AsideComponent,
-    MapComponent,
+    FourOhFourComponent,
     LandpadsComponent,
     LaunchpadsComponent,
-    MapPopupComponent,
     RocketsComponent,
     RocketItemComponent,
     LandpadItemComponent,
