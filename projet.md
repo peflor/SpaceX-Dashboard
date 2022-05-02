@@ -24,60 +24,31 @@ Données à afficher et demandée :
 
 ## FRONT-END
 #### Type de rockets & nombre de lancements 
-- inclure des icones (Fontawesome) pour symboliser Rocket et lancements
+- inclure des icones (Fontawesome) pour symboliser Rocket et lancements // non retenu
 
 #### Position landpad & launchpad sur une carte
 - affichage lié au back-end 
-    - position de la carte : center // width : 50% max
+    - position de la carte : center // width : 50% max // occupe 1/3
 
 #### Filtre Fusées par Landpad & Launchpad
-- liste déroulante Landpad 
-    - choix des fusées et impact sur la carte (pas demander mais voir si possible)
-- liste déroulante Launchpad 
-    - choix des fusées et impact sur la carte (pas demander mais voir si possible)
-
-#### Autres fonctionnalités
-- A définir
+- liste déroulante Landpad // infos non trouvé pour les landpads
+    - choix des fusées et impact sur la carte (pas demander mais voir si possible) // pas eu le temps a travailler sur V2
+- liste déroulante Launchpad // ok fonctionnel mais code à améliorer pour le rendre plus dynamique sur V2
+    - choix des fusées et impact sur la carte (pas demander mais voir si possible) // pas eu le temps a travailler sur V2
 
 #
 
-## BACK-END
-Connexion API et requêtes
+Connexion API et requêtes // ok
 #### Type de rockets & nombre de lancements 
-- Tableaux à créer : données via API
-    - rockets (tableau simple indexé avec le type de fusées)
-    - numbersOfLaunch (tableau simple avec nbr lancement)
-    - Ou tableau Associatif ["type" =>"nameRockets" , "number" => "numberOfLaunch"]
-        - créer peut etre une boucle pour recuperer les types & nbr de lancements et les push dans le tableau requête
-
+- cards créé sous forme de component avec boucle foreach: données via API
+    - rockets (tableau simple indexé avec le type de fusées) // info sur nbr lancement par an non trouvée
+    
+ 
 #### Position landpad & launchpad sur une carte
-- Tableau Associatif Multidimension  Landpad ["name"=>"nomDuLandpad" , "position" => "coordonnées", "typeFusées" => ["nomDesFusées]] 
+- utilisation librairie leaflet // ok
     
-- Tableau Associatif Multidimension  Launchpad ["name"=>"nomDuLaunchpad" , "position" => "coordonnées", "typeFusées" => ["nomDesFusées]]
-
-- chercher comment positionner sur carte & inserer icone symbole
-- pour la carte:
-    - https://www.frugalprototype.com/leaflet-angular/
-    - https://www.youtube.com/watch?v=NACSd_UxIBc&list=PLs_WqGRq69Ui25g61bB_D-9xKbHyjlw4g&index=3
-    
-#### Filtre Fusées par Landpad & Launchpad
- - choix des fusées et impact sur la carte
-     - fonction if ou switch en fonction de la fusée choisie on recupere ses coordonnées pour les afficher sur la carte
-
-    [ ] Faire un affichage simple en choisissant le landpad, la liste des fusées correspondantes apparaissent
-
-    [ ] Bonus car je ne pense pas que ce soit demandé mais c'est mieux quand on choisit le type de fusées elle apparaissent sur la carte. A voir une fois l'API assimilée.
-    
-
-#### Autres fonctionnalités
-- A définir
 
 #
-# TO DO
-- comprendre le fonctionnement de l'API
-- Définir si utilisation PHP ou Javascript
-- Chercher méthode pour affichage de carte avec données dynamique
-- Bonus: Ajouter des fonctionnalités Cool & FUN
 
 
 # Ressources
@@ -91,6 +62,3 @@ Connexion API et requêtes
     - https://api.spacexdata.com/v4/launchpads
 - lien API Roadster :
     - https://api.spacexdata.com/v4/roadster
-
-# Amelioration a Apporter
-- nbr de tir de rocket / an / rocket
