@@ -1,0 +1,77 @@
+<!-- Where's my car ??? -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="card col-8 shadow mt-5">
+      <h2 class="text-center">Where is my car ????</h2>
+      <div class="row">
+        <div class="col-6">
+          <img class="car" src={{roadster.flickr_images[1]}} alt="">
+          <img class="car" src={{roadster.flickr_images[0]}} alt="">
+        </div>
+        <div class="col-6 p-3">
+          <p class="alert alert-warning h5">Distance de la Terre : <strong>{{roadster.earth_distance_km | number:'1.0-0'}} km</strong></p>
+          <p class="alert alert-warning h5">Distance de Mars : <strong>{{roadster.mars_distance_km | number:'1.0-0'}}km</strong> </p>
+          <p class="alert alert-danger h3">Vitesse actuelle : <strong>{{roadster.speed_kph | number:'1.0-0'}}</strong> km/h</p>
+        </div>
+      </div>
+    </div>
+    <div class="card col-4 shadow mt-5">
+      <h2 class="text-center">Starlink launches</h2>
+      <div class="row">
+        <div class="col-6">
+          <img class="mt-3"id="star" src="../assets/img/spacex-starline-satellites.jpg" alt="">
+
+        </div>
+        <div class="col-6">
+          
+          <p class="mt-5 p-4 text-center alert alert-danger h3"><strong>{{starlink.length}} Launch</strong> </p> 
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="row my-5"> 
+
+  <!-- ROCKETS -->
+  <div class="card shadow col-7">
+    <h2 class="text-center pt-4">Rockets Type</h2>
+      <app-rockets></app-rockets>    
+    <div class="card shadow p-3"> 
+      <!-- selection launchpads & Rockets -->
+      <app-dropdown></app-dropdown>     
+    </div>
+  </div>
+
+  <!-- MAP -->
+  <div class="card shadow col-5 p-4">
+    <h2 class="mb-4 text-center">
+      <img src="https://i.ibb.co/GFcVZVS/location-dot-blue-sm.png" style="padding-right:5px; height:20px"><img>Landpads 
+      - Launchpads
+      <img src="https://i.ibb.co/DQbCgWQ/location-dot-red-sm.png" style=" height:20px"><img>
+      </h2>
+    <div id="frugalmap"></div>
+  </div>
+
+</div>
+
+<!-- Landpad & Launchpads Infos -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 my-3">
+      <h2 class="card shadow text-center my-3 p-2">Landpads Infos</h2>
+      <div class="row">
+        <app-landpad-item class="col-3" *ngFor="let oneLandpad of responseLand" [landpad]="oneLandpad"></app-landpad-item>
+      </div>
+    </div>
+    
+    <div class="col-12 mt-3">
+      <h2 class="card shadow text-center text-info my-3 p-2">Launchpads Infos</h2>
+      <div class="row justify-content-center ">
+        <app-launchpad-item class="text-center col-4" *ngFor="let oneLaunchpad of responseLaunch" [launchpad]="oneLaunchpad"></app-launchpad-item>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,27 @@
+
+<table class="table table-hover">
+    <thead>
+        <tr class="table-primary">
+        <th scope="col">Name</th>
+        <th scope="col">{{landpad.name | uppercase }}</th>    
+        </tr>
+    </thead>
+    <tbody>        
+        <tr>
+        <th scope="row">Status</th>
+        <td>{{landpad.status | uppercase }}</td>        
+        </tr>
+        <tr class="table-active">
+        <th scope="row">Locality</th>
+        <td>{{landpad.locality}}</td>        
+        </tr>
+        <tr>
+        <th scope="row">Landing Attempts</th>
+        <td>{{landpad.landing_attempts}}</td>        
+        </tr>
+        <tr class="table-active">
+        <th scope="row">Landing Success</th>
+        <td>{{landpad.landing_successes}}</td>        
+        </tr>             
+    </tbody>
+    </table>

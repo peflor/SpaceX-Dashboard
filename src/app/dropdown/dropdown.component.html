@@ -1,0 +1,30 @@
+<h3 class="bg-dark text-white p-2 text-center">Rockets by Launchpads</h3>
+
+<div class="row">
+    <div class="col-4 text-center">
+        <p class="h5">Select Launchpad</p>
+        <select class="m-1 "(change)="update($event)">
+            <option value="default">----</option>
+            <option > {{responseLaunch[0].name}} </option>
+            <option > {{responseLaunch[1].name}} </option>
+            <option > {{responseLaunch[2].name}} </option>
+            <option > {{responseLaunch[3].name}} </option>
+            <option > {{responseLaunch[4].name}} </option>
+            <option > {{responseLaunch[5].name}} </option>
+        </select>
+    </div>
+    <div class="col-4 text-center">
+        <p class="h5">Rockets ID</p>
+        <p> {{resultLaunchTest}} </p>
+    </div>
+    <div class="col-4 text-center">
+        <p class="h5">Rockets Name</p>
+        <p *ngIf="resultLaunchTest === responseLaunch[0].rockets"> {{rockets[0].name}} </p>
+        <p *ngIf="resultLaunchTest === responseLaunch[1].rockets"> {{rockets[1].name}} </p>
+        <p *ngIf="resultLaunchTest === responseLaunch[2].rockets"> No Rockets launch </p>
+        <p *ngIf="resultLaunchTest === responseLaunch[3].rockets"> {{rockets[0].name}} </p>
+        <p *ngIf="resultLaunchTest === responseLaunch[4].rockets"> {{rockets[1].name}} </p>
+        <p *ngIf="resultLaunchTest === responseLaunch[5].rockets"> {{rockets[1].name}} and {{rockets[2].name}} </p>        
+    </div>
+
+</div>

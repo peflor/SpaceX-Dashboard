@@ -1,0 +1,14 @@
+#frugalmap {
+    height: 600px;
+    width: 100%;
+}
+.car {
+    width:auto;
+    max-height:150px;
+    margin-top: 30px;
+    padding:5px;
+}
+#star {
+    width: 100%;
+    height:auto;
+}

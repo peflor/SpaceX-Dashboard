@@ -1,0 +1,28 @@
+
+<!-- <div class="container">
+    <div class="card shadow">
+        <h4 class="text-center">Title</h4>
+        <img src="" alt="">        
+        <p>name :</p>
+        <p>Type :</p>
+        <p>coût par lancement</p>
+        <p>1er vol</p>
+
+    </div>
+</div> -->
+
+<div class="card text-center shadow" id="rocketItem">
+    <div class="card-header bg-dark text-white ">
+        <h4 >{{rocket.name | titlecase }}</h4>
+    </div>
+    <div class="card-body">
+        <img [src]="rocket.flickr_images[0]" class="img-fluid" alt="photo {{rocket.name}}">
+        <hr>
+        <p>Type : {{rocket.type | uppercase }}</p>
+        <p>
+           Coût par lancement: <br>{{rocket.cost_per_launch | number}} $
+        </p>
+        <p> 1er vol: <br>{{rocket.first_flight}}</p>        
+    </div>
+</div>
+
